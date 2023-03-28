@@ -21,7 +21,7 @@ foreach ($zipFile in $zipFiles) {
     $sourceBlobUrl = "https://$storageAccountName.blob.core.windows.net/$containerName/$zipFile"
 
     # Set the destination file path
-    $destinationFilePath = Join-Path $downloadFolder $fileName    
+    $destinationFilePath = Join-Path $downloadFolder $zipFile    
     
     # Get the zip file from Azure storage
     $context = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $storageAccountKey
