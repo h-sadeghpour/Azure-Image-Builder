@@ -39,13 +39,13 @@
         "value": 127
       },
       "fslogixScriptURI": {
-        "value": "https://raw.githubusercontent.com/rohanislam2/rohanlab-azureImageBuilder/main/scripts/SetupFSLogix.ps1"
+        "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/SetupFSLogix.ps1"
       },
       "OptimizeOsScriptURI": {
-        "value": "https://raw.githubusercontent.com/rohanislam2/rohanlab-azureImageBuilder/main/scripts/OptimizeOS.ps1"
+        "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/OptimizeOS.ps1"
       },
       "teamsScriptURI": {
-        "value": "https://raw.githubusercontent.com/rohanislam2/rohanlab-azureImageBuilder/main/scripts/SetupTeams.ps1"
+        "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/SetupTeams.ps1"
       },
       "installappszipURI": {
         "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/installappszip.ps1"
