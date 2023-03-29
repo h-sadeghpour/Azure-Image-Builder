@@ -38,6 +38,18 @@
       "diskSize": {
         "value": 127
       },
+      "your-storage-account-name": {
+        "value": "stavdappsprdwe01" 
+      },
+      "your-container-name": {
+        "value": "apps" 
+      }, 
+      "your-keyvault-name": {
+        "value": "apps" 
+      },
+      "your-secret-name": {
+        "value": "" 
+      },        
       "fslogixScriptURI": {
         "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/SetupFSLogix.ps1"
       },
