@@ -48,7 +48,7 @@
         "value": "apps" 
       },
       "your-secret-name": {
-        "value": "" 
+        "value": "jde-avd-ib-kv-secret-01" 
       }, 
       "file1.exe": {
         "value": "AccessDatabaseEngine_X64.exe" 
