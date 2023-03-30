@@ -1,0 +1,47 @@
+# This is a  workflow to deploy Bicep modules to Azure with Actions
+
+name: Deploy Bicep Module to Azure
+
+# Controls when the workflow will run
+on:
+  push:
+    branches:
+      - main
+
+env:
+  LOCATION: 'westeurope'
+  RESOURCE_GROUP_NAME: 'rg-avdaib-prd-we-01'
+  MODULE_NAME: 'azureDeploy.bicep'
+  TEMPLATE_PARAMETERS_FILE: 'parameters.json'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up Azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
+      - name: Install Azure CLI
+        uses: azure/CLI@v1
+
+      - name: Validate Bicep module
+        run: |
+          az bicep validate --file $MODULE_NAME/azureDeploy.bicep
+      
+      - name: Publish Bicep module
+        run: |
+          az bicep publish --name $MODULE_NAME --version 1.0.0 --template-file $MODULE_NAME/azureDeploy.bicep
+
+      - name: Deploy Bicep module
+        run: |
+          az deployment group create \
+          --resource-group $RESOURCE_GROUP_NAME \
+          --template-uri https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/azureDeploy.bicep \
+          --parameters @$TEMPLATE_PARAMETERS_FILE \
+          --location $LOCATION
