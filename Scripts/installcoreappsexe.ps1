@@ -13,7 +13,7 @@ $storageAccountKey = (Get-AzKeyVaultSecret -VaultName $keyVaultName -Name $secre
 $downloadFolder = "C:\temp"
 
 # Set the list of .exe file names to download
-$fileNames = @("file1.exe", "file2.exe", "file3.exe")
+$fileNames = @("file1.exe", "file2.exe", "file3.exe", "file4.exe", "file5.exe", "file6.exe")
 
 # Loop through the list of .exe files and download them from the storage account blob
 foreach ($fileName in $fileNames) {
