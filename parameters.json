@@ -67,6 +67,39 @@
       }, 
       "file6.exe": {
         "value": "WinSCP-5.9.6-Setup.exe"
+      }, 
+      "file1.msi": {
+        "value": "AcroRdrDC1500720033_en_US.msi"
+      }, 
+      "file2.msi": {
+        "value": "CoreFTP_CoreFTPLite_2.2_EN_B1922.msi"
+      },
+      "file3.msi": {
+        "value": "DanskeBankFilePlugin-1.3.3.msi"
+      },
+      "file4.msi": {
+        "value": "DanskeBankFilePlugin-2.0.5m.msi"
+      }, 
+      "file5.msi": {
+        "value": "EPM_Add-in_NET45_x32.msi"
+      },
+      "file6.msi": {
+        "value": "googlechromestandaloneenterprise64.msi"
+      },
+      "file7.msi": {
+        "value": "jre1.8.0_18164.msi"
+      },
+      "file8.msi": {
+        "value": "Microsoft_Comctl32.ocxforTAS_6.0.80.22_EN.msi"
+      },
+      "file9.msi": {
+        "value": "msxml SP3.msi"
+      }, 
+      "file10.msi": {
+        "value": "vc_red - x64.msi"
+      }, 
+      "file11.msi": {
+        "value": "vc_red.msi"
       },        
       "fslogixScriptURI": {
         "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/SetupFSLogix.ps1"
