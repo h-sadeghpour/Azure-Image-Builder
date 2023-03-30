@@ -100,6 +100,30 @@
       }, 
       "file11.msi": {
         "value": "vc_red.msi"
+      }, 
+      "zipFile1.zip": {
+        "value": "OpenText_SCEforSAPSolutions22.2patch36_22.2.1_EN.zip"
+      }, 
+      "zipFile2.zip": {
+        "value": "SAP DS Client.zip"
+      },  
+      "zipFile3.zip": {
+        "value": "SAP_BusinessObjectsAnalysisforOffice_2.4.0.63248_EN_R2.zip"
+      }, 
+      "zipFile4.zip": {
+        "value": "SAP_BusinessObjectsAnalysisforOffice_2.4.0.63248_EN_R2.zip"
+      },  
+      "zipFile5.zip": {
+        "value": "SAP_SAPGUI_7.7_EN.zip"
+      },   
+      "zipFile6.zip": {
+        "value": "SAP_SecureLoginClient_3.0.2.5.0_EN.zip"
+      },    
+      "zipFile7.zip": {
+        "value": "SAP_SecureLoginClient_3.0.2.5.0_EN.zip"
+      },   
+      "zipFile8.zip": {
+        "value": "Single_Click_Entry_7.5.198_EN1.zip"
       },        
       "fslogixScriptURI": {
         "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/SetupFSLogix.ps1"
