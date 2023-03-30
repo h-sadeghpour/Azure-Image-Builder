@@ -13,7 +13,7 @@ $storageAccountKey = (Get-AzKeyVaultSecret -VaultName $keyVaultName -Name $secre
 $downloadFolder = "C:\temp"
 
 # Set the list of .msi file names to download
-$fileNames = @("file1.msi", "file2.msi", "file3.msi")
+$fileNames = @("file1.msi", "file2.msi", "file3.msi", "file4.msi", "file5.msi", "file6.msi", "file7.msi", "file8.msi", "file9.msi", "file10.msi", "file11.msi")
 
 # Loop through the list of .msi files and download them from the storage account blob
 foreach ($fileName in $fileNames) {
