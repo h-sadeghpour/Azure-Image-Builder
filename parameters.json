@@ -49,6 +49,24 @@
       },
       "your-secret-name": {
         "value": "" 
+      }, 
+      "file1.exe": {
+        "value": "AccessDatabaseEngine_X64.exe" 
+      }, 
+      "file2.exe": {
+        "value": "converter.exe" 
+      },        
+      "file3.exe": {
+        "value": "CuteWriter.exe" 
+      },
+      "file4.exe": {
+        "value": "LLinkOnline.exe"           
+      },
+      "file5.exe": {
+        "value": "npp.7.5.8.Installer.x64.exe"
+      }, 
+      "file6.exe": {
+        "value": "WinSCP-5.9.6-Setup.exe"
       },        
       "fslogixScriptURI": {
         "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/SetupFSLogix.ps1"
