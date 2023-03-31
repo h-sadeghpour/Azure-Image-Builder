@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "resourceGroupName": {
-            "value": "rg-avdaib-prd-we-01"
+            "value": "rg-avdaibautomated-prd-we-01"
         },
       "location": {
         "value": "West Europe"
@@ -109,19 +109,19 @@
       },  
       "zipFile3.zip": {
         "value": "SAP_BusinessObjectsAnalysisforOffice_2.4.0.63248_EN_R2.zip"
-      }, 
+      },   
       "zipFile4.zip": {
-        "value": "SAP_BusinessObjectsAnalysisforOffice_2.4.0.63248_EN_R2.zip"
-      },  
+        "value": "SAP_MicrosoftredistributableruntimeDLLsVS2010SP1(x86)_10.0.40219.1_EN.zip"
+      },   
       "zipFile5.zip": {
         "value": "SAP_SAPGUI_7.7_EN.zip"
-      },   
+      },      
       "zipFile6.zip": {
         "value": "SAP_SecureLoginClient_3.0.2.5.0_EN.zip"
-      },    
+      }, 
       "zipFile7.zip": {
-        "value": "SAP_SecureLoginClient_3.0.2.5.0_EN.zip"
-      },   
+        "value": "securestore_4_2_1_csob_multi_x64.zip"
+      }, 
       "zipFile8.zip": {
         "value": "Single_Click_Entry_7.5.198_EN1.zip"
       },        
