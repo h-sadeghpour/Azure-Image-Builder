@@ -126,22 +126,22 @@
         "value": "Single_Click_Entry_7.5.198_EN1.zip"
       },        
       "fslogixScriptURI": {
-        "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/SetupFSLogix.ps1"
+        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/SetupFSLogix.ps1"
       },
       "OptimizeOsScriptURI": {
-        "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/OptimizeOS.ps1"
+        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/OptimizeOS.ps1"
       },
       "teamsScriptURI": {
-        "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/SetupTeams.ps1"
+        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/SetupTeams.ps1"
       },
       "installappszipURI": {
-        "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/installappszip.ps1"
+        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/installappzip.ps1"
       },
       "installcoreappsexeURI": {
-        "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/installcoreappsexe.ps1"
+        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/installcoreappsexe.ps1"
       },
        "scriptmsiURI": {
-        "value": "https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/Scripts/scriptmsi"
+        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/scriptmsi.ps1"
       }       
     }
   }
