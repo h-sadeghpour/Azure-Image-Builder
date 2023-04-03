@@ -13,6 +13,7 @@ param vmSize string
 param diskSize int
 param fslogixScriptURI string
 param OptimizeOsScriptURI string
+param teamsScriptURI string
 param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
@@ -100,6 +101,7 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     containerName : containerName
     keyVaultName : keyVaultName
     secretName : secretName
+    teamsScriptURI : teamsScriptURI
   }
   dependsOn: [
     imagedef
