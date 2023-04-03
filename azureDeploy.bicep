@@ -22,10 +22,9 @@ param containerName string
 // Define target scope
 targetScope = 'subscription'
 
-//Create resource group
-resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' = {
+//Get existing resource group
+resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
   name: resourceGroupName
-  location: location
 }
 
 //Create user assigned managed identity
