@@ -32,10 +32,6 @@ jobs:
         with:
           azcliversion: 2.46.0        
           inlineScript: |
-            az bicep install
-            az deployment group create \
-            --resource-group $RESOURCE_GROUP_NAME \
-            --template-file $MODULE_NAME \
-            --parameters $TEMPLATE_PARAMETERS_FILE \
-            --mode Complete \
-            --verbose
+            az --version
+            
+
