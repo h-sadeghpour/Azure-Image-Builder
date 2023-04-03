@@ -94,7 +94,7 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     OptimizeOsScriptURI: OptimizeOsScriptURI
     installappszipURI: installappszipURI
     installcoreappsexeURI: installcoreappsexeURI
-    scriptmsiURI: scriptmsiURI
+
   }
   dependsOn: [
     imagedef
