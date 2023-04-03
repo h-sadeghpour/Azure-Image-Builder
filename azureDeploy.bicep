@@ -13,7 +13,6 @@ param vmSize string
 param diskSize int
 param fslogixScriptURI string
 param OptimizeOsScriptURI string
-param teamsScriptURI string
 param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
@@ -28,19 +27,6 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' = {
   name: resourceGroupName
   location: location
 }
-
-//Access Storage Account "Scripts" container
-resource storageAccountKey 'Microsoft.Storage/storageAccounts/keys@2021-04-01' = {
-  parent: storageAccount
-  keyName: 'your-secret-name'
-}
-
-resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-04-01' = {
-  name: containerName
-  parent: storageAccount
-}
-
-output connectionString string = storageAccount.primaryConnectionString
 
 //Create user assigned managed identity
 module identity './modules/identity.bicep' = {
@@ -106,7 +92,6 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     location: location
     fslogixScriptURI: fslogixScriptURI
     OptimizeOsScriptURI: OptimizeOsScriptURI
-    teamsScriptURI: teamsScriptURI
     installappszipURI: installappszipURI
     installcoreappsexeURI: installcoreappsexeURI
     scriptmsiURI: scriptmsiURI
