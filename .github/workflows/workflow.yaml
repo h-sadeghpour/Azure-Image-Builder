@@ -35,11 +35,13 @@ jobs:
              
       - name: Deploy Bicep module
         uses: azure/CLI@v1
-          inlineScript:| 
-             az deployment group create \
-             --resource-group $resourceGroupName \
-             --template-file azureDeploy.bicep \
-             --parameters parameters.json \
-             --location $location
-             --mode Complete \
-             --verbose
+        with:
+          azcliversion: 2.46.0        
+            inlineScript:| 
+               az deployment group create \
+               --resource-group $resourceGroupName \
+               --template-file azureDeploy.bicep \
+               --parameters parameters.json \
+               --location $location
+               --mode Complete \
+               --verbose
