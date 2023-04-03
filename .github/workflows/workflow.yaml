@@ -33,13 +33,15 @@ jobs:
         with:
           creds: ${{ secrets.CTCAZUREAVDMAGEBUILDERSPI }}
              
-      - name: Install Azure CLI
-        uses: azure/CLI@v1
-               
       - name: Deploy Bicep module
-        run: |
-          az deployment group create \
-          --resource-group $RESOURCE_GROUP_NAME \
-          --template-file Azure-Virtual-Desktop/main/azureDeploy.bicep \
-          --parameters @$TEMPLATE_PARAMETERS_FILE \
-          --location $LOCATION
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.0.0
+          inlineScript: |
+             az deployment group create \
+             --resource-group $resourceGroupName \
+             --template-file azureDeploy.bicep \
+             --parameters parameters.json \
+             --location $location
+             --mode Complete \
+             --verbose
