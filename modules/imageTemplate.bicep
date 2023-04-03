@@ -62,13 +62,6 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
         scriptUri: fslogixScriptURI
       }
       {
-        type: 'PowerShell'
-        name: 'SetupTeams'
-        runElevated: true
-        runAsSystem: true
-        scriptUri: teamsScriptURI
-      }
-      {
         type: 'WindowsRestart'
         restartCheckCommand: 'write-host "Restarting post Teams installation"'
         restartTimeout: '5m'
@@ -85,6 +78,32 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
         restartCheckCommand: 'write-host "Restarting post OS Optimization"'
         restartTimeout: '5m'
       }
+      {
+        type: 'PowerShell'
+        name: 'installappzip'
+        runElevated: true
+        runAsSystem: true
+        scriptUri: installappzipURI
+      }
+      {
+        type: 'PowerShell'
+        name: 'installcoreappsexe'
+        runElevated: true
+        runAsSystem: true
+        scriptUri: installcoreappsexeURI
+      }
+      {
+        type: 'PowerShell'
+        name: 'scriptmsi'
+        runElevated: true
+        runAsSystem: true
+        scriptUri: scriptmsiURI
+      }      
+      {
+        type: 'WindowsRestart'
+        restartCheckCommand: 'write-host "Restarting post app Installation"'
+        restartTimeout: '5m'
+      }      
     ]
   }
 }
