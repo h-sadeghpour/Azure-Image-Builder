@@ -1,10 +1,10 @@
 # Set the storage account name and container name
-$storageAccountName = "your-storage-account-name"
-$containerName = "your-container-name"
+$storageAccountName = "storageAccountName"
+$containerName = "containerName"
 
 # Set the key vault name and secret name where the storage account key is stored
-$keyVaultName = "your-keyvault-name"
-$secretName = "your-secret-name"
+$keyVaultName = "keyVaultName"
+$secretName = "secretName"
 
 # Get the storage account key from key vault
 $storageAccountKey = (Get-AzKeyVaultSecret -VaultName $keyVaultName -Name $secretName).SecretValueText
