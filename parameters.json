@@ -136,6 +136,9 @@
       },
       "installcoreappsexeURI": {
         "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/installcoreappsexe.ps1"
-      },       
+      },  
+       "scriptmsiURI": {
+        "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/scriptmsi.ps1"
+      }        
     }
   }
