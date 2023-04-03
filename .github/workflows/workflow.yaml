@@ -39,9 +39,8 @@ jobs:
           azcliversion: 2.46.0        
           inlineScript: | 
             az deployment group create \
-            --resource-group $resourceGroupName \
-            --template-file azureDeploy.bicep \
-            --parameters parameters.json \
-            --location $location
+            --resource-group $RESOURCE_GROUP_NAME \
+            --template-file MODULE_NAME \
+            --parameters TEMPLATE_PARAMETERS_FILE \
             --mode Complete \
             --verbose
