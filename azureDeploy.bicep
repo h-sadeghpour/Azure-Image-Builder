@@ -18,6 +18,8 @@ param installcoreappsexeURI string
 param scriptmsiURI string
 param storageAccountName string
 param containerName string
+param keyVaultName string
+param secretName string
 
 // Define target scope
 targetScope = 'subscription'
@@ -96,6 +98,8 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     scriptmsiURI: scriptmsiURI
     storageAccountName: storageAccountName
     containerName : containerName
+    keyVaultName : keyVaultName
+    secretName : secretName
   }
   dependsOn: [
     imagedef
