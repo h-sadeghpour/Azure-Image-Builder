@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "resourceGroupName": {
-            "value": "rg-avdaib-prd-we-01"
+            "value": "test-avd-ib-automation-rg"
         },
       "location": {
         "value": "West Europe"
