@@ -32,7 +32,7 @@ jobs:
         with:
           azcliversion: 2.46.0        
           inlineScript: |
-            az install bicep
+            az bicep install
             az deployment group create \
             --resource-group $RESOURCE_GROUP_NAME \
             --template-file $MODULE_NAME \
