@@ -21,19 +21,32 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        
+      - name: Install Bicep
+        run: |
+          curl -Lo bicep https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64
+          chmod +x ./bicep
+          sudo mv ./bicep /usr/local/bin/bicep  
       
       - name: Set up Azure login
         uses: azure/login@v1
         with:
           creds: ${{ secrets.CTCAZUREAVDMAGEBUILDERSPI }}
+          
+      - name: Download Bicep Modules
+        run: |
+           git clone https://github.com/JDE-Tech-integration/Azure-Virtual-Desktop.git
+           cd Azure-Virtual-Desktop
+           git checkout main
+           bicep build   
       
       - name: Install Azure CLI
         uses: azure/CLI@v1
-
+               
       - name: Deploy Bicep module
         run: |
           az deployment group create \
           --resource-group $RESOURCE_GROUP_NAME \
-          --template-uri https://raw.githubusercontent.com/JDE-Tech-integration/Azure-Virtual-Desktop/main/azureDeploy.bicep \
+          --template-file Azure-Virtual-Desktop/main/azureDeploy.bicep \
           --parameters @$TEMPLATE_PARAMETERS_FILE \
           --location $LOCATION
