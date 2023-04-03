@@ -45,7 +45,7 @@
         "value": "apps" 
       }, 
       "your-keyvault-name": {
-        "value": "apps" 
+        "value": "kv-avd-prd-we-01" 
       },
       "your-secret-name": {
         "value": "jde-avd-ib-kv-secret" 
@@ -126,22 +126,19 @@
         "value": "Single_Click_Entry_7.5.198_EN1.zip"
       },        
       "fslogixScriptURI": {
-        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/SetupFSLogix.ps1"
+        "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/SetupFSLogix.ps1"
       },
       "OptimizeOsScriptURI": {
-        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/OptimizeOS.ps1"
-      },
-      "teamsScriptURI": {
-        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/SetupTeams.ps1"
+        "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/OptimizeOS.ps1"
       },
       "installappszipURI": {
-        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/installappzip.ps1"
+        "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/installappzip.ps1"
       },
       "installcoreappsexeURI": {
-        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/installcoreappsexe.ps1"
+        "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/installcoreappsexe.ps1"
       },
        "scriptmsiURI": {
-        "value": "https://stavdappsprdwe01.blob.core.windows.net/scripts/scriptmsi.ps1"
+        "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/scriptmsi.ps1"
       }       
     }
   }
