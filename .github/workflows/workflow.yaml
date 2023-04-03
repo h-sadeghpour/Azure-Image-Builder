@@ -37,8 +37,8 @@ jobs:
         uses: azure/CLI@v1
         with:
           azcliversion: 2.46.0        
-            inlineScript:| 
-               az deployment group create \
+          inlineScript: | 
+            az deployment group create \
                --resource-group $resourceGroupName \
                --template-file azureDeploy.bicep \
                --parameters parameters.json \
