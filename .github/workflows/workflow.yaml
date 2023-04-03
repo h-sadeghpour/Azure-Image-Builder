@@ -21,13 +21,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
-      - name: Install Bicep
-        run: |
-          curl -Lo bicep https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64
-          chmod +x ./bicep
-          sudo mv ./bicep /usr/local/bin/bicep  
-      
+             
       - name: Set up Azure login
         uses: azure/login@v1
         with:
@@ -37,7 +31,8 @@ jobs:
         uses: azure/CLI@v1
         with:
           azcliversion: 2.46.0        
-          inlineScript: | 
+          inlineScript: |
+            az install bicep
             az deployment group create \
             --resource-group $RESOURCE_GROUP_NAME \
             --template-file $MODULE_NAME \
