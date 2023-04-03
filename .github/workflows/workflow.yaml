@@ -30,14 +30,6 @@ jobs:
       - name: Install Azure CLI
         uses: azure/CLI@v1
 
-      - name: Validate Bicep module
-        run: |
-          az bicep validate --file $MODULE_NAME/azureDeploy.bicep
-      
-      - name: Publish Bicep module
-        run: |
-          az bicep publish --name $MODULE_NAME --version 1.0.0 --template-file $MODULE_NAME/azureDeploy.bicep
-
       - name: Deploy Bicep module
         run: |
           az deployment group create \
