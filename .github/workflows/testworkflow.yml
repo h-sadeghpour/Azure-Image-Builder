@@ -14,6 +14,6 @@ jobs:
       uses: azure/arm-deploy@v1
       with:
         subscriptionId: '54d81e17-d7a8-459c-9cca-ed176d923bb2'
-        resourceGroupName: 'test-avd-ib-automation-rg'
+        resourceGroupName: 'rg-avdaibautomated-prd-we-01'
         template: ./azureDeploy.bicep
         parameters: ./parameters.json
