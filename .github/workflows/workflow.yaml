@@ -40,7 +40,7 @@ jobs:
           inlineScript: | 
             az deployment group create \
             --resource-group $RESOURCE_GROUP_NAME \
-            --template-file MODULE_NAME \
-            --parameters TEMPLATE_PARAMETERS_FILE \
+            --template-file $MODULE_NAME \
+            --parameters $TEMPLATE_PARAMETERS_FILE \
             --mode Complete \
             --verbose
