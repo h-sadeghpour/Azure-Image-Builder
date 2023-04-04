@@ -12,6 +12,9 @@ param diskSize int
 param fslogixScriptURI string
 param OptimizeOsScriptURI string
 param teamsScriptURI string
+param installappszipURI string
+param installcoreappsexeURI string
+param scriptmsiURI string
 
 resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' existing = {
   name: identityName
