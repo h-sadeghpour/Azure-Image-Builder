@@ -92,10 +92,6 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     installappszipURI: installappszipURI
     installcoreappsexeURI: installcoreappsexeURI
     scriptmsiURI: scriptmsiURI    
-    storageAccountName: storageAccountName
-    containerName : containerName
-    keyVaultName : keyVaultName
-    secretName : secretName
   }
   dependsOn: [
     imagedef
