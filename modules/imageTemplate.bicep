@@ -82,10 +82,10 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
       }
       {
         type: 'PowerShell'
-        name: 'installappzip'
+        name: 'installappszip'
         runElevated: true
         runAsSystem: true
-        scriptUri: installappzipURI
+        scriptUri: installappszipURI
       }
       {
         type: 'PowerShell'
