@@ -38,16 +38,16 @@
       "diskSize": {
         "value": 127
       },
-      "your-storage-account-name": {
+      "storageAccountName": {
         "value": "stavdappsprdwe01" 
       },
-      "your-container-name": {
+      "containerName": {
         "value": "apps" 
       }, 
-      "your-keyvault-name": {
+      "keyVaultName": {
         "value": "kv-avd-prd-we-01" 
       },
-      "your-secret-name": {
+      "secretName": {
         "value": "jde-avd-ib-kv-secret" 
       }, 
       "file1.exe": {
