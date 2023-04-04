@@ -11,7 +11,6 @@ param sourceImageVersion string
 param diskSize int
 param fslogixScriptURI string
 param OptimizeOsScriptURI string
-param teamsScriptURI string
 param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
