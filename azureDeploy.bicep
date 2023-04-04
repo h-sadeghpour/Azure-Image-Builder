@@ -13,9 +13,6 @@ param vmSize string
 param diskSize int
 param fslogixScriptURI string
 param OptimizeOsScriptURI string
-param installappszipURI string
-param installcoreappsexeURI string
-param scriptmsiURI string
 param storageAccountName string
 param containerName string
 param keyVaultName string
@@ -93,9 +90,6 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     location: location
     fslogixScriptURI: fslogixScriptURI
     OptimizeOsScriptURI: OptimizeOsScriptURI
-    installappszipURI: installappszipURI
-    installcoreappsexeURI: installcoreappsexeURI
-    scriptmsiURI: scriptmsiURI
     storageAccountName: storageAccountName
     containerName : containerName
     keyVaultName : keyVaultName
