@@ -16,10 +16,6 @@ param OptimizeOsScriptURI string
 param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
-param storageAccountName string
-param containerName string
-param keyVaultName string
-param secretName string
 
 // Define target scope
 targetScope = 'subscription'
