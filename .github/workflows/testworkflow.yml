@@ -11,11 +11,8 @@ jobs:
         creds: ${{ secrets.CTCAZUREAVDMAGEBUILDERSPI }}
       # Deploy Bicep file
     - name: deploy
-      uses: azure/CLI@v1
+      uses: azure/arm-deploy@v1
       with:
-        azcliversion: 2.23.0
-         inlineScript:|
-            az deployment group create --resource-group $resourceGroupName         
         subscriptionId: '54d81e17-d7a8-459c-9cca-ed176d923bb2'
         resourceGroupName: 'rg-avdaibautomated-prd-we-01'
         template: ./azureDeploy.bicep
