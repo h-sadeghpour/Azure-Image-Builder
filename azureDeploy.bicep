@@ -18,7 +18,7 @@ param installcoreappsexeURI string
 param scriptmsiURI string
 
 // Define target scope
-targetScope = 'resourceGroup'
+targetScope = 'rg'
 
 //Get existing resource group
 resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
