@@ -39,17 +39,11 @@
         "value": 127
       },
       "storageAccountName": {
-        "value": "stavdappsprdwe01" 
+        "value": "stavdtmpstorage" 
       },
       "containerName": {
         "value": "apps" 
-      }, 
-      "keyVaultName": {
-        "value": "kv-avd-prd-we-01" 
-      },
-      "secretName": {
-        "value": "jde-avd-ib-kv-secret" 
-      }, 
+      },  
       "file1.exe": {
         "value": "AccessDatabaseEngine_X64.exe" 
       }, 
