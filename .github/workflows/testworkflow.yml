@@ -13,9 +13,8 @@ jobs:
     - name: deploy
       uses: azure/arm-deploy@v1
       with:
-        #scope: 'subscription'
+        scope: 'subscription'
         subscriptionId: '54d81e17-d7a8-459c-9cca-ed176d923bb2'
-        resourceGroupName: 'rg-avdaibautomated-prd-we-01'
-        #region: 'westeurope'
+        region: 'westeurope'
         template: ./azureDeploy.bicep
         parameters: ./parameters.json
