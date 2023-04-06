@@ -11,7 +11,7 @@ jobs:
         creds: ${{ secrets.CTCAZUREAVDMAGEBUILDERSPI }}
       # Deploy Bicep file
     - name: Deploy Bicep module
-      uses: azure/CLI@v2
+      uses: azure/CLI@v1
       with:
           azcliversion: 2.46.0        
           inlineScript: |
