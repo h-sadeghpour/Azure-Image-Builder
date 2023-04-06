@@ -111,7 +111,6 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     scriptmsiURI: scriptmsiURI
     containerName: containerName
     storageAccountName: storageAccountName
-    storageContainer: storageContainer
   }
   dependsOn: [
     imagedef
