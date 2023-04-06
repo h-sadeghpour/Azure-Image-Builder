@@ -16,5 +16,5 @@ jobs:
           azcliversion: 2.46.0        
           inlineScript: |
             az --version
-            az deployment sub create --location 'westeurope' --template-file 'azureDeploy.bicep'' --parameters 'parameters.json' --verbose
+            az deployment sub create --location 'westeurope' --template-file 'azureDeploy.bicep' --parameters 'parameters.json' --verbose
             
