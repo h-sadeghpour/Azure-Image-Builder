@@ -16,6 +16,8 @@ param OptimizeOsScriptURI string
 param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
+param storageAccountName string
+param containerName string
 
 // Define target scope
 targetScope = 'subscription'
@@ -23,6 +25,18 @@ targetScope = 'subscription'
 //Get existing resource group
 resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
   name: resourceGroupName
+}
+
+//Get existing Storage Account 
+resource stg 'Microsoft.Storage/storageAccounts@2019-06-01' existing = {
+  name: 'storageAccountName'
+
+// Retrieving resource property
+output blobEndpoint string = stg.properties.primaryEndpoints.blob
+
+//Get exisitng container
+resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-06-01' existing = {
+  name: 'StorageAccountName/containerName'
 }
 
 //Create user assigned managed identity
@@ -92,6 +106,9 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     installappszipURI: installappszipURI
     installcoreappsexeURI: installcoreappsexeURI
     scriptmsiURI: scriptmsiURI
+    containerName: containerName
+    storageAccountName: storageAccountName
+    storageContainer: storageContainer
   }
   dependsOn: [
     imagedef
