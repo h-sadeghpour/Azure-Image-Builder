@@ -12,7 +12,7 @@ jobs:
       # Deploy Bicep file
     - name: Deploy Bicep module
       uses: azure/CLI@v2
-          with:
+      with:
           azcliversion: 2.46.0        
           inlineScript: |
             az --version
