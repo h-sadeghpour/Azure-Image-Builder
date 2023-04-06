@@ -10,12 +10,11 @@ jobs:
       with:
         creds: ${{ secrets.CTCAZUREAVDMAGEBUILDERSPI }}
       # Deploy Bicep file
-    - name: deploy
-      uses: azure/arm-deploy@v1
-      with:
-        deploymentScope: 'subscription'
-        location: 'westeurope'
-        #subscriptionId: '54d81e17-d7a8-459c-9cca-ed176d923bb2'
-        #resourceGroupName: 'rg-avdaibautomated-prd-we-01'
-        template: ./azureDeploy.bicep
-        parameters: ./parameters.json
+    - name: Deploy Bicep module
+      uses: azure/CLI@v2
+          with:
+          azcliversion: 2.46.0        
+          inlineScript: |
+            az --version
+            az deployment sub create --location 'westeurope' --template-file 'azureDeploy.bicep'' --parameters 'parameters.json' --verbose
+            
