@@ -35,10 +35,10 @@ resource stg 'Microsoft.Storage/storageAccounts@2019-06-01' existing = {
 output blobEndpoint string = stg.properties.primaryEndpoints.blob
 
 //Get exisitng container
-resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-06-01' existing = {
-  name: 'storageAccountName/blobEndpoint/containerName'
-  scope: rg 
-}
+//resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-06-01' existing = {
+ // name: 'storageAccountName/blobEndpoint/containerName'
+ // scope: rg 
+//}
 
 //Create user assigned managed identity
 module identity './modules/identity.bicep' = {
