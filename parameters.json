@@ -42,7 +42,7 @@
         "value": "stavdtmpstorage" 
       },
       "containerName": {
-        "value": "apps" 
+        "value": "scripts" 
       },  
       "file1.exe": {
         "value": "AccessDatabaseEngine_X64.exe" 
