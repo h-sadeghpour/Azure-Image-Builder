@@ -17,4 +17,4 @@ jobs:
         subscriptionId: '54d81e17-d7a8-459c-9cca-ed176d923bb2'
         region: 'westeurope'
         template: ./azureDeploy.bicep
-        parameters: ./parameters.j
+        parameters: ./parameters.json
