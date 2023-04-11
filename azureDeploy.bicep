@@ -16,7 +16,6 @@ param OptimizeOsScriptURI string
 param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
-param storageAccountName string
 
 // Define target scope
 targetScope = 'subscription'
@@ -108,7 +107,6 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     installappszipURI: installappszipURI
     installcoreappsexeURI: installcoreappsexeURI
     scriptmsiURI: scriptmsiURI
-    storageAccountName: storageAccountName
   }
   dependsOn: [
     imagedef
