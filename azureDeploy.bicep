@@ -26,13 +26,13 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
 }
 
 //Get existing Storage Account 
-resource stg 'Microsoft.Storage/storageAccounts@2019-06-01' existing = {
-  name: 'storageAccountName'
-  scope: rg 
-}
+//resource stg 'Microsoft.Storage/storageAccounts@2019-06-01' existing = {
+ // name: 'storageAccountName'
+ // scope: rg 
+//}
 
 // Retrieving resource property
-output blobEndpoint string = stg.properties.primaryEndpoints.blob
+//output blobEndpoint string = stg.properties.primaryEndpoints.blob
 
 //Get exisitng container
 //resource storageContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-06-01' existing = {
