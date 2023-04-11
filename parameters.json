@@ -38,15 +38,6 @@
       "diskSize": {
         "value": 127
       },
-//      "storageAccountName": {
-//        "value": "stavdtmpstorage" 
-//      },
-   //   "containerName": {
-   //     "value": "scripts" 
-   //   },  
-      "fslogixScriptURI": {
-        "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/SetupFSLogix.ps1"
-      },
       "OptimizeOsScriptURI": {
         "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/OptimizeOS.ps1"
       },
