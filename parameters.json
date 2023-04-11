@@ -38,9 +38,9 @@
       "diskSize": {
         "value": 127
       },
-      "storageAccountName": {
-        "value": "stavdtmpstorage" 
-      },
+//      "storageAccountName": {
+//        "value": "stavdtmpstorage" 
+//      },
    //   "containerName": {
    //     "value": "scripts" 
    //   },  
