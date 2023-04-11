@@ -9,7 +9,6 @@ param sourceImageOffer string
 param sourceImageSku string
 param sourceImageVersion string
 param diskSize int
-param fslogixScriptURI string
 param OptimizeOsScriptURI string
 param installappszipURI string
 param installcoreappsexeURI string
@@ -56,13 +55,6 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
       }
     ]
     customize: [
-      {
-        type: 'PowerShell'
-        name: 'SetupFsLogix'
-        runElevated: true
-        runAsSystem: true
-        scriptUri: fslogixScriptURI
-      }
       {
         type: 'WindowsRestart'
         restartCheckCommand: 'write-host "Restarting post Teams installation"'
