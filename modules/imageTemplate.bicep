@@ -55,11 +55,6 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
       }
     ]
     customize: [
-     // {
-      //  type: 'WindowsRestart'
-      //  restartCheckCommand: 'write-host "Restarting post Teams installation"'
-      //  restartTimeout: '5m'
-     // }
       {
         type: 'PowerShell'
         name: 'OptimizeOS'
