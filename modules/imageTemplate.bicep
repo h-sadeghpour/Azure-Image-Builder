@@ -13,6 +13,7 @@ param OptimizeOsScriptURI string
 param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
+param removebloatwareURI string
 
 resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' existing = {
   name: identityName
@@ -67,6 +68,18 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
         restartCheckCommand: 'write-host "Restarting post OS Optimization"'
         restartTimeout: '5m'
       }
+      {
+        type: 'PowerShell'
+        name: 'removebloatware'
+        runElevated: true
+        runAsSystem: true
+        scriptUri: removebloatwareURI
+      }
+      {
+        type: 'WindowsRestart'
+        restartCheckCommand: 'write-host "Restarting post removing bloatware"'
+        restartTimeout: '5m'
+      }      
       {
         type: 'PowerShell'
         name: 'installappszip'
