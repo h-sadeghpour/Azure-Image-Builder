@@ -9,7 +9,7 @@ resource contributor 'Microsoft.Authorization/roleDefinitions@2018-01-01-preview
   name: 'b24988ac-6180-42a0-ab88-20f7382dd24c'
 }
 
-resource storageBlobReaderRoleDefinition 'Microsoft.Authorization/roleDefinitions@2020-04-01-preview' existing = {
+resource storageBlobReaderRoleDefinition 'Microsoft.Authorization/roleDefinitions@2020-03-01-preview' existing = {
   scope: subscription()
   name: '2a2b9908-6ea1-4ae2-8e65-a410df84e7d1'
 }
