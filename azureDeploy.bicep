@@ -17,9 +17,9 @@ param installcoreappsexeURI string
 param scriptmsiURI string
 param removebloatwareURI string
 
-var contributor = [resourceId('Microsoft.Authorization/roleDefinitions','b24988ac-6180-42a0-ab88-20f7382dd24c')]
-var storageBlobReader = [resourceId('Microsoft.Authorization/roleDefinitions','2a2b9908-6ea1-4ae2-8e65-a410df84e7d1')]
-var KeyVaultReader = [resourceId('Microsoft.Authorization/roleDefinitions','21090545-7ca7-4776-b22c-e363652d74d2')]
+var contributor = resourceId('Microsoft.Authorization/roleDefinitions','b24988ac-6180-42a0-ab88-20f7382dd24c')
+var storageBlobReader = resourceId('Microsoft.Authorization/roleDefinitions','2a2b9908-6ea1-4ae2-8e65-a410df84e7d1')
+var KeyVaultReader = resourceId('Microsoft.Authorization/roleDefinitions','21090545-7ca7-4776-b22c-e363652d74d2')
 
 // Define target scope
 targetScope = 'subscription'
