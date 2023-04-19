@@ -14,6 +14,7 @@ param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
 param removebloatwareURI string
+param timeStamp string = utcNow('u')
 
 resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' existing = {
   name: identityName
@@ -24,7 +25,7 @@ resource acg 'Microsoft.Compute/galleries@2022-03-03' existing = {
 }
 
 resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14' = {
-  name: imageTemplateName
+  name: concat(imageTemplateName, '-', timeStamp)
   location: location
   identity: {
     type:'UserAssigned'
