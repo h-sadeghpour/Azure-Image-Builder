@@ -38,6 +38,9 @@
       "diskSize": {
         "value": 127
       },
+      "storageAccountName": {
+        "value": "stavdtmpstorage"
+      },        
       "OptimizeOsScriptURI": {
         "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/OptimizeOS.ps1"
       },
