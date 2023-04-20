@@ -38,8 +38,8 @@
       "diskSize": {
         "value": 127
       },
-      "storageAccountName": {
-        "value": "stavdtmpstorage"
+      "storageAccountRgName": {
+        "value": "rg-avdaib-prd-we-01"
       },        
       "OptimizeOsScriptURI": {
         "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/OptimizeOS.ps1"
