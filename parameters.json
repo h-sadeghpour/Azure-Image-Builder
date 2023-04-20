@@ -39,7 +39,7 @@
         "value": 127
       },
       "storageAccountRgName": {
-        "value": "rg-avdaib-prd-we-01"
+        "value": "avd-aib-storageaccount-rg-01"
       },        
       "OptimizeOsScriptURI": {
         "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/OptimizeOS.ps1"
