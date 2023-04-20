@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "resourceGroupName": {
-            "value": "aib-avd-githubaction-test-02"
+            "value": "aib-avd-githubaction-test"
         },
       "location": {
         "value": "West Europe"
