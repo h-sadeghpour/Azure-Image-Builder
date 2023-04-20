@@ -1,9 +1,9 @@
-param identityName string
 param PrincipalId string
+param roleDefinitionId string
 
 resource rbac 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = {
 
-  name: guid(identity.id, roleDefinitionId)
+  name: guid(PrincipalId, roleDefinitionId)
   properties: {
     roleDefinitionId: roleDefinitionId
     principalId: principalId
