@@ -16,6 +16,7 @@ param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
 param removebloatwareURI string
+param storageAccountName string
 
 var contributor = resourceId('Microsoft.Authorization/roleDefinitions','b24988ac-6180-42a0-ab88-20f7382dd24c')
 var storageBlobReader = resourceId('Microsoft.Authorization/roleDefinitions','2a2b9908-6ea1-4ae2-8e65-a410df84e7d1')
@@ -27,6 +28,10 @@ targetScope = 'subscription'
 //Get existing resource group
 resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
   name: resourceGroupName
+}
+//Get existing storage account group
+resource sa 'mailto:Microsoft.Storage/storageAccounts@2022-09-01'existing = {
+  name: storageAccountName
 }
 
 //Create user assigned managed identity
@@ -67,7 +72,7 @@ module contibutorRole './modules/rbacnew.bicep' = {
 //Assign Storage Blob Reader to the user assigned managed identity
 module StorageRole './modules/rbacnew.bicep' = {
  name: 'StorageRoleDeployment'
- scope: rg    
+ scope: sa    
  params: {
     identityName: identityName
     roleDefinitionId: storageBlobReader
