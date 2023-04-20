@@ -35,6 +35,11 @@ resource sarg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
   name: storageAccountRgName
 }
 
+resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' existing = {
+  name: identityName
+  scope: rg
+}
+
 //Create user assigned managed identity
 module identity './modules/identity.bicep' = {
   name: 'identityDeployment'
@@ -62,7 +67,7 @@ module contibutorRole './modules/rbacnew.bicep' = {
  name: 'contibutorRoleDeployment'
  scope: rg    
  params: {
-    identityName: identityName
+    PrincipalId: identity.properties.principalId
     roleDefinitionId: contributor
   }
   dependsOn: [
@@ -75,7 +80,7 @@ module StorageRole './modules/rbacnew.bicep' = {
  name: 'StorageRoleDeployment'
  scope: sarg  
  params: {
-    identityName: identityName
+    PrincipalId: identity.properties.principalId
     roleDefinitionId: storageBlobReader
   }
   dependsOn: [
@@ -88,7 +93,7 @@ module KeyVaultRole './modules/rbacnew.bicep' = {
  name: 'KeyVaultRoleDeployment'
  scope: rg    
  params: {
-    identityName: identityName
+    PrincipalId: identity.properties.principalId
     roleDefinitionId: KeyVaultReader
   }
   dependsOn: [
