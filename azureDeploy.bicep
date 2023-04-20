@@ -62,7 +62,7 @@ module contibutorRole './modules/rbacnew.bicep' = {
  name: 'contibutorRoleDeployment'
  scope: rg    
  params: {
-    PrincipalId: identity.outputs.principalId
+    principalId: identity.outputs.principalId
     roleDefinitionId: contributor
   }
   dependsOn: [
@@ -75,7 +75,7 @@ module StorageRole './modules/rbacnew.bicep' = {
  name: 'StorageRoleDeployment'
  scope: sarg  
  params: {
-    PrincipalId: identity.outputs.principalId
+    principalId: identity.outputs.principalId
     roleDefinitionId: storageBlobReader
   }
   dependsOn: [
@@ -88,7 +88,7 @@ module KeyVaultRole './modules/rbacnew.bicep' = {
  name: 'KeyVaultRoleDeployment'
  scope: rg    
  params: {
-    PrincipalId: identity.outputs.principalId
+    principalId: identity.outputs.principalId
     roleDefinitionId: KeyVaultReader
   }
   dependsOn: [
