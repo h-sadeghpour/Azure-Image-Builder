@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "resourceGroupName": {
-            "value": "rg-avdaibautomated-prd-we-01"
+            "value": "AIB_AVD_githubaction_test_01"
         },
       "location": {
         "value": "West Europe"
