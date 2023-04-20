@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "resourceGroupName": {
-            "value": "AIB_AVD_githubaction_test_01"
+            "value": "aib-avd-githubaction-test-01"
         },
       "location": {
         "value": "West Europe"
@@ -12,7 +12,7 @@
         "value": "id-avdaib-prd-we-01"
       },
       "computeGalleryName": {
-        "value": "gal_avd_prd_we_01"
+        "value": "jdecomputegallery01"
       },
       "imageDefinitionName": {
         "value": "wind10avd22h2"
