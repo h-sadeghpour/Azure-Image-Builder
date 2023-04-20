@@ -30,7 +30,7 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
   name: resourceGroupName
 }
 //Get existing storage account group
-resource sa 'mailto:Microsoft.Storage/storageAccounts@2022-09-01'existing = {
+resource sa 'Microsoft.Storage/storageAccounts@2022-09-01' existing = {
   name: storageAccountName
 }
 
