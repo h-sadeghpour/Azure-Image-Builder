@@ -16,7 +16,7 @@ param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
 //param removebloatwareURI string
-param storageAccountRgName string
+param infraRgName string
 
 var contributor = resourceId('Microsoft.Authorization/roleDefinitions','b24988ac-6180-42a0-ab88-20f7382dd24c')
 var storageBlobReader = resourceId('Microsoft.Authorization/roleDefinitions','2a2b9908-6ea1-4ae2-8e65-a410df84e7d1')
@@ -31,8 +31,8 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
 }
 
 //Get existing resource group
-resource sarg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
-  name: storageAccountRgName
+resource infrarg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
+  name: infraRgName
 }
 
 //Create user assigned managed identity
@@ -73,7 +73,7 @@ module contibutorRole './modules/rbacnew.bicep' = {
 //Assign Storage Blob Reader to the user assigned managed identity
 module StorageRole './modules/rbacnew.bicep' = {
  name: 'StorageRoleDeployment'
- scope: sarg  
+ scope: infrarg  
  params: {
     principalId: identity.outputs.principalId
     roleDefinitionId: storageBlobReader
@@ -86,7 +86,7 @@ module StorageRole './modules/rbacnew.bicep' = {
 //Assign Key Vault Reader to the user assigned managed identity
 module KeyVaultRole './modules/rbacnew.bicep' = {
  name: 'KeyVaultRoleDeployment'
- scope: rg    
+ scope: infrarg    
  params: {
     principalId: identity.outputs.principalId
     roleDefinitionId: KeyVaultReader
