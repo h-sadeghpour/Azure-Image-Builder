@@ -33,7 +33,7 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
     }
   }
   properties: {
-    buildTimeoutInMinutes: 120
+    buildTimeoutInMinutes: 240
     source: {
       type: 'PlatformImage'
       publisher: sourceImagePublisher
