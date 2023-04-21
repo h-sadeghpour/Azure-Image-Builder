@@ -43,15 +43,15 @@
   //    },        
       "OptimizeOsScriptURI": {
         "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/OptimizeOS.ps1"
-      },     
+      }, 
+       "scriptmsiURI": {
+        "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/scriptmsi.ps1"
+      }         
       "installappszipURI": {
         "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/installappzip.ps1"
       },
       "installcoreappsexeURI": {
         "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/installcoreappsexe.ps1"
-      },  
-       "scriptmsiURI": {
-        "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/scriptmsi.ps1"
-      }        
+      },         
     }
   }
