@@ -13,7 +13,7 @@ param OptimizeOsScriptURI string
 param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
-#param removebloatwareURI string
+//param removebloatwareURI string
 
 resource identity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' existing = {
   name: identityName
