@@ -15,7 +15,7 @@ param OptimizeOsScriptURI string
 param installappszipURI string
 param installcoreappsexeURI string
 param scriptmsiURI string
-param removebloatwareURI string
+#param removebloatwareURI string
 param storageAccountRgName string
 
 var contributor = resourceId('Microsoft.Authorization/roleDefinitions','b24988ac-6180-42a0-ab88-20f7382dd24c')
@@ -140,7 +140,7 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     installappszipURI: installappszipURI
     installcoreappsexeURI: installcoreappsexeURI
     scriptmsiURI: scriptmsiURI
-    removebloatwareURI: removebloatwareURI 
+    #removebloatwareURI: removebloatwareURI 
   }
   dependsOn: [
     imagedef
