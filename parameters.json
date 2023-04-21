@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "resourceGroupName": {
-            "value": "rg-avdaib-prd-we-02"
+            "value": "rg-avdaib-prd-we-03"
         },
       "location": {
         "value": "West Europe"
