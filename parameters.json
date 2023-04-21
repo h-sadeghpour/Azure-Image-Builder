@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "resourceGroupName": {
-            "value": "rg-avd-ib-automateddeploy-prd-we-01"
+            "value": "rg-avdaib-prd-we-02"
         },
       "location": {
         "value": "West Europe"
@@ -12,7 +12,7 @@
         "value": "id-avdaib-prd-we-01"
       },
       "computeGalleryName": {
-        "value": "jdecomputegallery02"
+        "value": "acg_avdcomputegallary_prd_we_02"
       },
       "imageDefinitionName": {
         "value": "wind10avd22h2"
