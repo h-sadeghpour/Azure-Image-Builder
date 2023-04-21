@@ -79,7 +79,14 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
   //      type: 'WindowsRestart'
   //      restartCheckCommand: 'write-host "Restarting post removing bloatware"'
   //      restartTimeout: '5m'
-  //    }      
+  //    }   
+        {
+        type: 'PowerShell'
+        name: 'scriptmsi'
+        runElevated: true
+        runAsSystem: true
+        scriptUri: scriptmsiURI
+      } 
       {
         type: 'PowerShell'
         name: 'installappszip'
@@ -94,13 +101,7 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
         runAsSystem: true
         scriptUri: installcoreappsexeURI
       }
-      {
-        type: 'PowerShell'
-        name: 'scriptmsi'
-        runElevated: true
-        runAsSystem: true
-        scriptUri: scriptmsiURI
-      }      
+     
       {
         type: 'WindowsRestart'
         restartCheckCommand: 'write-host "Restarting post app Installation"'
