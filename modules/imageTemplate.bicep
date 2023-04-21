@@ -75,11 +75,11 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
   //      runAsSystem: true
   //      scriptUri: removebloatwareURI
   //    }
-      {
-        type: 'WindowsRestart'
-        restartCheckCommand: 'write-host "Restarting post removing bloatware"'
-        restartTimeout: '5m'
-      }      
+  //    {
+  //      type: 'WindowsRestart'
+  //      restartCheckCommand: 'write-host "Restarting post removing bloatware"'
+  //      restartTimeout: '5m'
+  //    }      
       {
         type: 'PowerShell'
         name: 'installappszip'
