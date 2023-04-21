@@ -52,6 +52,6 @@
       },
       "installcoreappsexeURI": {
         "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/installcoreappsexe.ps1"
-      },         
+      }         
     }
   }
