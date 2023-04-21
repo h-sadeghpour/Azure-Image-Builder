@@ -38,9 +38,9 @@
       "diskSize": {
         "value": 127
       },
-      "infraRgName": {
-        "value": "rg-avdaibinfra-prd-we-01"
-      },        
+  //    "infraRgName": {
+  //      "value": "rg-avdaibinfra-prd-we-01"
+  //    },        
       "OptimizeOsScriptURI": {
         "value": "https://stavdtmpstorage.blob.core.windows.net/scripts/OptimizeOS.ps1"
       },     
