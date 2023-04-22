@@ -10,8 +10,8 @@ param sourceImageSku string
 param sourceImageVersion string
 param diskSize int
 param OptimizeOsScriptURI string
-param installappszipURI string
-param installcoreappsexeURI string
+//param installappszipURI string
+//param installcoreappsexeURI string
 param scriptmsiURI string
 //param removebloatwareURI string
 
@@ -87,20 +87,20 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
         runAsSystem: true
         scriptUri: scriptmsiURI
       } 
-      {
-        type: 'PowerShell'
-        name: 'installappszip'
-        runElevated: true
-        runAsSystem: true
-        scriptUri: installappszipURI
-      }
-      {
-        type: 'PowerShell'
-        name: 'installcoreappsexe'
-        runElevated: true
-        runAsSystem: true
-        scriptUri: installcoreappsexeURI
-      }
+  //    {
+  //      type: 'PowerShell'
+ //       name: 'installappszip'
+ //       runElevated: true
+ //       runAsSystem: true
+//        scriptUri: installappszipURI
+//      }
+ //     {
+  //      type: 'PowerShell'
+  //      name: 'installcoreappsexe'
+  //      runElevated: true
+  //      runAsSystem: true
+  //      scriptUri: installcoreappsexeURI
+  //    }
      
       {
         type: 'WindowsRestart'
