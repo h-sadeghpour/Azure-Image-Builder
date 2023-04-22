@@ -9,7 +9,7 @@ param sourceImageOffer string
 param sourceImageSku string
 param sourceImageVersion string
 param diskSize int
-param OptimizeOsScriptURI string
+//param OptimizeOsScriptURI string
 //param installappszipURI string
 //param installcoreappsexeURI string
 param scriptmsiURI string
@@ -56,18 +56,18 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
       }
     ]
     customize: [
-      {
-        type: 'PowerShell'
-        name: 'OptimizeOS'
-        runElevated: true
-        runAsSystem: true
-        scriptUri: OptimizeOsScriptURI
-      }
-      {
-        type: 'WindowsRestart'
-        restartCheckCommand: 'write-host "Restarting post OS Optimization"'
-        restartTimeout: '5m'
-      }
+  //    {
+   //     type: 'PowerShell'
+   //     name: 'OptimizeOS'
+   //     runElevated: true
+    //    runAsSystem: true
+    //    scriptUri: OptimizeOsScriptURI
+    //  }
+    //  {
+    //    type: 'WindowsRestart'
+    //    restartCheckCommand: 'write-host "Restarting post OS Optimization"'
+    //    restartTimeout: '5m'
+    //  }
    //  {
   //      type: 'PowerShell'
   //      name: 'removebloatware'
