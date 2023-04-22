@@ -11,7 +11,7 @@ param sourceImageSku string
 param sourceImageVersion string
 param vmSize string
 param diskSize int
-param OptimizeOsScriptURI string
+//param OptimizeOsScriptURI string
 //param installappszipURI string
 //param installcoreappsexeURI string
 param scriptmsiURI string
@@ -136,7 +136,7 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     vmSize: vmSize
     diskSize: diskSize
     location: location
-    OptimizeOsScriptURI: OptimizeOsScriptURI
+    //OptimizeOsScriptURI: OptimizeOsScriptURI
     //installappszipURI: installappszipURI
    // installcoreappsexeURI: installcoreappsexeURI
     scriptmsiURI: scriptmsiURI
