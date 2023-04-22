@@ -102,11 +102,11 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
   //      scriptUri: installcoreappsexeURI
   //    }
      
-      {
-        type: 'WindowsRestart'
-        restartCheckCommand: 'write-host "Restarting post app Installation"'
-        restartTimeout: '5m'
-      }      
+  //    {
+ //       type: 'WindowsRestart'
+ //       restartCheckCommand: 'write-host "Restarting post app Installation"'
+ //       restartTimeout: '5m'
+ //     }      
     ]
   }
 }
