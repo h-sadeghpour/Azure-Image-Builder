@@ -12,8 +12,8 @@ param sourceImageVersion string
 param vmSize string
 param diskSize int
 param OptimizeOsScriptURI string
-param installappszipURI string
-param installcoreappsexeURI string
+//param installappszipURI string
+//param installcoreappsexeURI string
 param scriptmsiURI string
 //param removebloatwareURI string
 //param infraRgName string
@@ -137,8 +137,8 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     diskSize: diskSize
     location: location
     OptimizeOsScriptURI: OptimizeOsScriptURI
-    installappszipURI: installappszipURI
-    installcoreappsexeURI: installcoreappsexeURI
+    //installappszipURI: installappszipURI
+   // installcoreappsexeURI: installcoreappsexeURI
     scriptmsiURI: scriptmsiURI
     //removebloatwareURI: removebloatwareURI 
   }
