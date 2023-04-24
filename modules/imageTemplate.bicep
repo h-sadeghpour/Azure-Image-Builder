@@ -9,9 +9,9 @@ param sourceImageOffer string
 param sourceImageSku string
 param sourceImageVersion string
 param diskSize int
-//param OptimizeOsScriptURI string
-//param installappszipURI string
-//param installcoreappsexeURI string
+param OptimizeOsScriptURI string
+param installappszipURI string
+param installcoreappsexeURI string
 param scriptmsiURI string
 //param removebloatwareURI string
 
@@ -56,57 +56,40 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
       }
     ]
     customize: [
-  //    {
-   //     type: 'PowerShell'
-   //     name: 'OptimizeOS'
-   //     runElevated: true
-    //    runAsSystem: true
-    //    scriptUri: OptimizeOsScriptURI
-    //  }
-    //  {
-    //    type: 'WindowsRestart'
-    //    restartCheckCommand: 'write-host "Restarting post OS Optimization"'
-    //    restartTimeout: '5m'
-    //  }
-   //  {
-  //      type: 'PowerShell'
-  //      name: 'removebloatware'
-  //      runElevated: true
-  //      runAsSystem: true
-  //      scriptUri: removebloatwareURI
-  //    }
-  //    {
-  //      type: 'WindowsRestart'
-  //      restartCheckCommand: 'write-host "Restarting post removing bloatware"'
-  //      restartTimeout: '5m'
-  //    }   
+      {
+          type: 'PowerShell'
+          name: 'OptimizeOS'
+          runElevated: true
+          runAsSystem: true
+          scriptUri: OptimizeOsScriptURI
+      }
+      {
+          type: 'WindowsRestart'
+          restartCheckCommand: 'write-host "Restarting post OS Optimization"'
+          restartTimeout: '5m'
+      }   
         {
-        type: 'PowerShell'
-        name: 'scriptmsi'
-        runElevated: true
-        runAsSystem: true
-        scriptUri: scriptmsiURI
+          type: 'PowerShell'
+          name: 'scriptmsi'
+          runElevated: true
+          runAsSystem: true
+          scriptUri: scriptmsiURI
       } 
-  //    {
-  //      type: 'PowerShell'
- //       name: 'installappszip'
- //       runElevated: true
- //       runAsSystem: true
-//        scriptUri: installappszipURI
-//      }
- //     {
-  //      type: 'PowerShell'
-  //      name: 'installcoreappsexe'
-  //      runElevated: true
-  //      runAsSystem: true
-  //      scriptUri: installcoreappsexeURI
-  //    }
-     
-  //    {
- //       type: 'WindowsRestart'
- //       restartCheckCommand: 'write-host "Restarting post app Installation"'
- //       restartTimeout: '5m'
- //     }      
+        {
+          type: 'PowerShell'
+          name: 'installappszip'
+          runElevated: true
+          runAsSystem: true
+          scriptUri: installappszipURI
+      }
+       {
+          type: 'PowerShell'
+          name: 'installcoreappsexe'
+          runElevated: true
+          runAsSystem: true
+          scriptUri: installcoreappsexeURI
+     }
+         
     ]
   }
 }
