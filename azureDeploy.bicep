@@ -11,16 +11,16 @@ param sourceImageSku string
 param sourceImageVersion string
 param vmSize string
 param diskSize int
-//param OptimizeOsScriptURI string
-//param installappszipURI string
-//param installcoreappsexeURI string
+param OptimizeOsScriptURI string
+param installappszipURI string
+param installcoreappsexeURI string
 param scriptmsiURI string
 //param removebloatwareURI string
-//param infraRgName string
+
 
 var contributor = resourceId('Microsoft.Authorization/roleDefinitions','b24988ac-6180-42a0-ab88-20f7382dd24c')
 var storageBlobReader = resourceId('Microsoft.Authorization/roleDefinitions','2a2b9908-6ea1-4ae2-8e65-a410df84e7d1')
-var KeyVaultReader = resourceId('Microsoft.Authorization/roleDefinitions','4633458b-17de-408a-b874-0445c86b69e6')
+//var KeyVaultReader = resourceId('Microsoft.Authorization/roleDefinitions','4633458b-17de-408a-b874-0445c86b69e6')
 
 // Define target scope
 targetScope = 'subscription'
@@ -29,11 +29,6 @@ targetScope = 'subscription'
 resource rg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
   name: resourceGroupName
 }
-
-//Get existing resource group
-//resource infrarg 'Microsoft.Resources/resourceGroups@2021-01-01' existing = {
-//  name: infraRgName
-//}
 
 //Create user assigned managed identity
 module identity './modules/identity.bicep' = {
@@ -44,18 +39,6 @@ module identity './modules/identity.bicep' = {
     location: location
   }
 }
-
-//Assign RBAC to the user assigned managed identity
-//module rbac './modules/rbac.bicep' = {
-//  name: 'rabcDeployment'
-//  scope: rg    
-//  params: {
-//    identityName: identityName
-//  }
-//  dependsOn: [
-//    identity
- // ]
-//}
 
 //Assign Contributor Role to the user assigned managed identity
 module contibutorRole './modules/rbacnew.bicep' = {
@@ -77,19 +60,6 @@ module StorageRole './modules/rbacnew.bicep' = {
  params: {
     principalId: identity.outputs.principalId
     roleDefinitionId: storageBlobReader
-  }
-  dependsOn: [
-    identity
- ]
-}
-
-//Assign Key Vault Reader to the user assigned managed identity
-module KeyVaultRole './modules/rbacnew.bicep' = {
- name: 'KeyVaultRoleDeployment'
- scope: rg    
- params: {
-    principalId: identity.outputs.principalId
-    roleDefinitionId: KeyVaultReader
   }
   dependsOn: [
     identity
@@ -136,9 +106,9 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     vmSize: vmSize
     diskSize: diskSize
     location: location
-    //OptimizeOsScriptURI: OptimizeOsScriptURI
-    //installappszipURI: installappszipURI
-   // installcoreappsexeURI: installcoreappsexeURI
+    OptimizeOsScriptURI: OptimizeOsScriptURI
+    installappszipURI: installappszipURI
+    installcoreappsexeURI: installcoreappsexeURI
     scriptmsiURI: scriptmsiURI
     //removebloatwareURI: removebloatwareURI 
   }
