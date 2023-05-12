@@ -117,5 +117,3 @@ module imageTemplate './modules/imageTemplate.bicep' = {
     StorageRole
   ]
 }
-
-
