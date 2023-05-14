@@ -10,7 +10,7 @@
     $Template = Get-AzImageBuilderTemplate
     If ($Template.Name -like "avd10ImageTemplate03"){
     
-        Remove-AzImageBuilderTemplate -Name $Template.Name - ResourceGroupName $Template.ResourceGroupName
+        Remove-AzImageBuilderTemplate -Name $Template.Name -ResourceGroupName $Template.ResourceGroupName
     }Else {
     
         Write-Host "Template does not exist and will be created." 
