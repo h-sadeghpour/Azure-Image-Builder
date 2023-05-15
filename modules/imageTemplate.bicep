@@ -23,23 +23,6 @@ resource acg 'Microsoft.Compute/galleries@2022-03-03' existing = {
   name: computeGalleryName
 }
 
- resource RemoveBuild 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
-  name: 'RemoveBuild'
-  location: location
-  kind: 'AzurePowerShell'
-  identity: {
-    type: 'UserAssigned'
-    userAssignedIdentities: {
-      '/subscriptions/54d81e17-d7a8-459c-9cca-ed176d923bb2/resourcegroups/rg-avdaib-prd-we-03/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id-avdaib-prd-we-03': {}
-    }
-  }
-  properties: {
-    azPowerShellVersion: '7.3'
-    scriptContent: loadTextContent('RemoveBuild.ps1')
-    retentionInterval: 'P1D'
-  }
-}
-
 resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14' = {
   name: imageTemplateName
   location: location
