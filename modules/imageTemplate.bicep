@@ -110,3 +110,4 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
     retentionInterval: 'P1D'
   }
 }
+
