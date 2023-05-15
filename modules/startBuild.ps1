@@ -7,14 +7,16 @@
     
 #Verify the previous Template
 
-    #$Template = Get-AzImageBuilderTemplate
-    #If ($Template.Name -like "avd10ImageTemplate03"){
+    $Template = Get-AzImageBuilderTemplate
+    If ($Template.Name -like "avd10ImageTemplate03"){
     
-    #    Remove-AzImageBuilderTemplate -Name $Template.Name -ResourceGroupName $Template.ResourceGroupName
-    #}Else {
+        Remove-AzImageBuilderTemplate -Name $Template.Name -ResourceGroupName $Template.ResourceGroupName
+    }Else {
     
-    #    Write-Host "Template does not exist and will be created." 
-    #}
+        Write-Host "Template does not exist and will be created." 
+    }
+    
+    Start-Sleep -Seconds 300
 
 #Build image
     Start-AzImageBuilderTemplate -ResourceGroupName $resourceGroupName -Name $imageTemplateName -NoWait
