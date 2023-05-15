@@ -23,7 +23,7 @@ resource acg 'Microsoft.Compute/galleries@2022-03-03' existing = {
   name: computeGalleryName
 }
 
- resource startBuild 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
+ resource RemoveBuild 'Microsoft.Resources/deploymentScripts@2020-10-01' = {
   name: 'RemoveBuild'
   location: location
   kind: 'AzurePowerShell'
