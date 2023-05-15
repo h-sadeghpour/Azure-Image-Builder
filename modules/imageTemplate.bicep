@@ -105,7 +105,7 @@ resource imageTemplate 'Microsoft.VirtualMachineImages/imageTemplates@2022-02-14
     }
   }
   properties: {
-    azPowerShellVersion: '8.3'
+    azPowerShellVersion: '7.3'
     scriptContent: loadTextContent('startBuild.ps1')
     retentionInterval: 'P1D'
   }
