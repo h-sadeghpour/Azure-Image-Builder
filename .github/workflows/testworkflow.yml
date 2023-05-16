@@ -1,7 +1,4 @@
-on:
-   schedule:
-        - cron: 0 20 25 * 3
-        
+on: [push]     
 name: Deploy Azure Bicep
 jobs:
   build-and-deploy:
