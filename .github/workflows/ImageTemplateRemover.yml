@@ -1,0 +1,8 @@
+name: Image Template Remover
+on:
+  workflow_dispatch:
+     inputs:
+      Deploy Azure Bicep:
+        description: 'ًDeploy Azure Bicep Will be triggered'
+        required: true
+        default: 'Deploy Azure Bicep'
